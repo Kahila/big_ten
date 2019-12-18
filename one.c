@@ -20,8 +20,8 @@ char *tolower_(char *str)
     int j = 0;
 
     //allocating memory of size strlen(str)
-    // char *tmp = (char)malloc(sizeof(char) * strlen_(str));
-    char tmp[100] = {0};
+    char *tmp = (char *)malloc(sizeof(char) * strlen_(str));
+    // char tmp[100] = {0};
     while (str[i])
     {
         if (str[i] >= 'A' && str[i] <= 'Z')
@@ -58,8 +58,9 @@ int comp(char *str1, char *str2)
 }
 
 //using recursion to find the acurence of a substring in the haystack
-void check(char *sub, char *str, int start, int end)
+void check(char *str, int start, int end)
 {
+    char *tmp = (char *)malloc(sizeof(char) * (start - end));
 }
 
 int main(int argc, char **argv)
